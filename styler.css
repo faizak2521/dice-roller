@@ -1,0 +1,26 @@
+
+/* Create Global Fonts/Colors (set theme of web) */
+html, body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: cadetblue;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Reusable variables */
+:root {
+}
+
+.title {
+    text-align: center;
+    font-size: large;
+}
+
+.roll-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+    border: 1px solid #333;
+    background-color: aliceblue;
+    cursor: pointer;
+}
