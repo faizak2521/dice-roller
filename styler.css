@@ -14,6 +14,7 @@ body {
     justify-content: center;
     display: flex;
     justify-content: center;
+    background-color: cadetblue;
 }
 
 /* Styling for the dice */
@@ -35,15 +36,63 @@ body {
     transform-style: preserve-3d;
 }
 
+/* Added slant to dice and side faces affects */
 .face::before {
     position: absolute;
     content: '';
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    background-color: #f6f3f0;
+    background-color: rgb(162, 45, 45);
     transform: translateZ(-1px);
 
+}
+
+/* Added a dot to dice for numbering */
+.face::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #131210;
+}
+
+/* One red dot for dice main face */
+.front::after {
+    width: 30px;
+    height: 30px;
+    background: #f63330;
+    margin: -15px 0 0 -15px;
+}
+
+/* Added second fact to the right side of slanted first face */
+.front {
+    transform: translateZ(50px);
+}
+
+/* Added thrid back face*/
+.back {
+    transform: rotateX(180deg) translateZ(50px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+
+.right {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(50px);
 }
 
 /* .title {
