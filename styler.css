@@ -7,6 +7,15 @@
     outline: 0;
     box-sizing: border-box;
 }
+.container {
+    display: grid;
+    place-items: center;
+    width: 250px;
+    padding: 60px 0 40px;
+    border-radius: 30px;
+    background: white;
+    box-shadow: 0 0 20px black;
+}
 
 body {
     height: auto;
@@ -23,7 +32,12 @@ body {
     width: 100px;
     height: 100px;
     transform-style: preserve-3d; /* Preserves 3-d for all faces */
-    transform: rotateX(45deg) rotateY(45deg);
+}
+
+@keyframes rolling {
+    50% {
+        transform: rotateX(455deg) rotateY(455deg);
+    }
 }
 
 .face {
@@ -43,7 +57,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    background-color: rgb(162, 45, 45);
+    background-color: #fbf5f5;
     transform: translateZ(-1px);
 
 }
@@ -58,14 +72,6 @@ body {
     height: 18px;
     border-radius: 50%;
     background: #131210;
-}
-
-/* One red dot for dice main face */
-.front::after {
-    width: 30px;
-    height: 30px;
-    background: #f63330;
-    margin: -15px 0 0 -15px;
 }
 
 /* Added second fact to the right side of slanted first face */
@@ -95,6 +101,76 @@ body {
     transform: rotateY(-90deg) translateZ(50px);
 }
 
+/* Testing purposes */
+/* .dice {
+    transform: rotateX(0deg) rotateY(90deg);
+
+} */
+
+/* One red dot for dice main face */
+.front::after {
+    width: 30px;
+    height: 30px;
+    background: #f63330;
+    margin: -15px 0 0 -15px;
+}
+
+
+.back::after {
+    margin: -35px 0 0 -30px;
+    box-shadow: 40px 0,
+                0 25px,
+                40px 25px,
+                0 50px,
+                40px 50px;
+}
+
+.top::after {
+    margin: -30px 0 0 -30px;
+    box-shadow: 40px 40px;
+}
+
+.bottom::after {
+    margin:-36px 0 0 -36px;
+    box-shadow: 26px 26px,
+                52px 52px,
+                52px 0,
+                0 52px;
+
+}
+.right::after {
+    margin: -30px 0 0 -30px;
+    box-shadow: 40px 0,
+                0 40px,
+                40px 40px;
+}
+
+.left::after {
+    margin: -35px 0 0 -35px;
+    box-shadow: 25px 25px,
+                50px 50px;
+}
+
+/* Button style*/
+
+.roll-btn {
+    margin-top: 60px;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 3px solid cadetblue;
+    background-color: white;
+    cursor: pointer;
+    font-family: B612 Mono;
+    transition: .4s;
+}
+.roll-btn:active {
+    transform: scale(0.95);
+    background-color: #e0e0e0;
+}
+.roll-btn:hover {
+    color: #fff;
+    background-color: cadetblue;
+}
 /* .title {
     text-align: center;
     margin-bottom: 500px;
@@ -114,7 +190,3 @@ body {
     text-align: center;
 } */
 
-/* .roll-btn:active {
-    transform: scale(0.95);
-    background-color: #e0e0e0;
-} */
