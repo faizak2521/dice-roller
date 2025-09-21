@@ -1,24 +1,59 @@
 
 /* Create Global Fonts/Colors (set theme of web) */
-html, body {
-    font-family:'Times New Roman', Times, serif;
-    background-color: cadetblue;
-    color: #333;
-    line-height: 1.5;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
 }
 
-/* Reusable variables */
-:root {
+body {
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
-.title {
+/* Styling for the dice */
+.dice {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d; /* Preserves 3-d for all faces */
+    transform: rotateX(45deg) rotateY(45deg);
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 5px solid #e0e0e0;
+    background: linear-gradient(145deg,#dddbd8, #fff);
+    transform-style: preserve-3d;
+}
+
+.face::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #f6f3f0;
+    transform: translateZ(-1px);
+
+}
+
+/* .title {
     text-align: center;
-    margin-top: 50px;
+    margin-bottom: 500px;
     font-size: 50px;
-}
+} */
 
-.roll-btn {
-    margin-top: 500px;
+/* .roll-btn {
+    margin-top: 20px;
     width: 100px;
     height: 50px;
     font-size: 14px;
@@ -28,9 +63,9 @@ html, body {
 }
 .wrapper {
     text-align: center;
-}
+} */
 
-.roll-btn:active {
+/* .roll-btn:active {
     transform: scale(0.95);
     background-color: #e0e0e0;
-}
+} */
