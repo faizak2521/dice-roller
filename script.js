@@ -3,6 +3,11 @@ window.addEventListener('load', () => { if (rollBtn) rollBtn.focus(); });
 // Auto focus the roll button so user can hit Enter to roll
 window.addEventListener('load', () => { if (rollBtn) rollBtn.focus(); });
 
+window.onload = () => {
+    randomDice();
+};
+
+
 const dice = document.querySelector('.dice');
 const rollBtn = document.querySelector('.roll-btn');
 
