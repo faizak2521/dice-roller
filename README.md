@@ -1,7 +1,7 @@
 # 🎲 Dice Roller (3D)
 
 A browser-based 3D dice roller built with **HTML**, **CSS**, and **JavaScript**.  
-The dice roll values are powered by a custom [Dice Roller API](https://github.com/faizak2521/dice-roller-api).  
+The dice roll values are powered by a custom dice logic API.  
 
 Click the button or press the Enter key to roll a die that animates into the correct face based on the API’s random value.  
 
