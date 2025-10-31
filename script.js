@@ -48,30 +48,42 @@ const rollDice = random => {
 
     dice.style.animation = 'rolling 4s ease';
 
+    // switch applies whihc number comes up (1-6) then applies css 3D rotation
     setTimeout(() => {
-
+        /*
+        1 ↔ 6   (front/back)
+        2 ↔ 5   (top/bottom)
+        3 ↔ 4   (right/left)
+        */ 
         switch (random) {
             case 1:
+                // Default orientation – front face (1) visible
                 dice.style.transform = 'rotateX(0deg) rotateY(0deg)';
                 break;
 
             case 6: 
+                // Default orientation – front face (1) visible
                 dice.style.transform = 'rotateX(180deg) rotateY(0deg)';
                 break;
 
             case 2:
+                // Rotates 90° upward – top face (2) visible.
                 dice.style.transform = 'rotateX(-90deg) rotateY(0deg)';
                 break;   
                 
             case 5:
+                // Rotates 90° downward – opposite of case 2 (5) visible)
                 dice.style.transform = 'rotateX(90deg) rotateY(0deg)';
                 break;      
 
             case 3:
+                // Rotates 90° to the right – right face (3) visible.
+
                 dice.style.transform = 'rotateX(0deg) rotateY(90deg)';
                 break;      
 
             case 4:
+                //Rotates 90° to the left – left face (4) visible
                 dice.style.transform = 'rotateX(0deg) rotateY(-90deg)';
                 break;   
                 
